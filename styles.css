@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* White text color */
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.neon-background {
+    background: linear-gradient(145deg, #000000, #0d0d0d);
+}
+
+.neon-text {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+}
+
+.neon-border {
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.neon-input {
+    background-color: #0d0d0d;
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.neon-input:focus {
+    background-color: #0d0d0d;
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.neon-button {
+    background-color: #00ff00;
+    border-color: #00ff00;
+    color: #000000;
+}
+
+.machine {
+    margin-top: 20px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Machine Converter</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            color: white;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .neon-text {
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+        }
+
+        .neon-border {
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .neon-input {
+            background-color: #0d0d0d;
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+
+        .neon-input:focus {
+            background-color: #0d0d0d;
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+
+        .neon-button {
+            background-color: #00ff00;
+            border-color: #00ff00;
+            color: #000000;
+        }
+
+        .machine {
+            margin-top: 20px;
+        }
+
+        .table {
+            background-color: #0d0d0d;
+            color: #00ff00;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th,
+        .table td {
+            border: 1px solid #00ff00;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="neon-text">State Machine Converter</h1>
+        <div class="conversion-selection neon-border">
+            <label for="conversionType" class="neon-text">Select conversion type:</label>
+            <select id="conversionType" class="form-control neon-input">
+                <option value="mealyToMoore">Mealy to Moore</option>
+                <option value="mooreToMealy">Moore to Mealy</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="numStates" class="neon-text">Number of States:</label>
+            <input type="number" id="numStates" class="form-control neon-input" min="1" value="1">
+        </div>
+        <div class="input-fields" id="transitionInputs"></div>
+        <button id="convertButton" class="btn btn-primary neon-button">Convert</button>
+        <div id="outputContainer" class="machine"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('conversionType').addEventListener('change', function() {
+            location.reload();
+        });
+    </script>
+</body>
+</html>
